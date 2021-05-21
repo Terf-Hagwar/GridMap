@@ -1,0 +1,27 @@
+﻿<Window x:Class="GridMap.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GridMap"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1200">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="80*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Background="#FF2C2C2C" Orientation="Horizontal">
+            <Label Content="X" Margin="5" VerticalAlignment="Center" Foreground="#FFE0CFCF"/>
+            <TextBox x:Name="SetX" Text="5" Width="50px" Height="30px" HorizontalContentAlignment="Right" Margin="10"/>
+            <Label Content="Y" Margin="5" VerticalAlignment="Center" Foreground="#FFE0CFCF"/>
+            <TextBox x:Name="SetY" Text="5" Width="50px" Height="30px" HorizontalContentAlignment="Right" Margin="10"/>
+            <Button Content="Chenge" Click="Button_Click" Width="150px" Height="30px" Margin="10"/>
+        </StackPanel>
+
+        <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Auto" Background="#FF151515">
+            <Grid x:Name="MapGrid"/>
+        </ScrollViewer>
+    </Grid>
+</Window>
